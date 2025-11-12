@@ -2,27 +2,25 @@
 #define BIRD_H
 
 #include "Animal.h"
-
-class Mammal():public Animal(){
+class Bird():public Animal(){
       private:
-      string furColor;
+      float wingSpan;
       public:
-      Mammal(){
-          furColor="";
+      Bird(){
+          wingSpan=0.0;
       }
-      Mammal(string c):Animal(string n,int a,bool hungry){
-          furColor=c;
+      Bird(float w):Animal(string n,int a,bool hungry){
+          wingSpan=w;
       }
-      ~Mammal(){}
-      void setFurColor(srting c){
-          furColor=c;
+      ~Bird(){}
+      void setWingSpan(srting w){
+         wingSpan=w;
       }
-      string getFurColor(){
-          return furColor;
+      string getWingSpan(){
+          return wingSpan;
       }
       
   };
-
 
 
 
