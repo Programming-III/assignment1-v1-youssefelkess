@@ -60,6 +60,7 @@ class Animal{
     bool operator==(const Animal& other) const {
         return (name == other.name && age == other.age);
     }
+virtual void sound() = 0;
 };
 
 
