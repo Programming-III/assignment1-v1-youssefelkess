@@ -19,6 +19,15 @@ class Bird():public Animal(){
       string getWingSpan(){
           return wingSpan;
       }
+       void sound() override {
+        cout << getName() << " chirps!" << endl;
+    }
+    
+    friend ostream& operator<<(ostream& os, const Bird& b) {
+        os << "Bird (Name: " << b.getName() << ", Age: " << b.getAge() 
+           << ", Wingspan: " << b.wingspan << "m)";
+        return os;
+    }
       
   };
 
