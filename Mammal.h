@@ -20,6 +20,16 @@ class Mammal():public Animal(){
       string getFurColor(){
           return furColor;
       }
+       void sound() override {
+        cout << getName() << " makes a mammal sound!" << endl;
+    }
+    
+    friend ostream& operator<<(ostream& os, const Mammal& m) {
+        os << "Mammal (Name: " << m.getName() << ", Age: " << m.getAge() 
+           << ", Fur Color: " << m.furColor
+           << ", " << (m.isVenomous ? "Venomous" : "Not Venomous") << ")";
+        return os;
+    }
       
   };
 
