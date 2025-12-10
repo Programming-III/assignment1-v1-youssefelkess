@@ -20,6 +20,15 @@ class Reptile():public Animal(){
       string getIsVenomous(){
           return isVenomous;
       }
+          void sound() override {
+        cout << getName() << " hisses!" << endl;
+    }
+    
+    friend ostream& operator<<(ostream& os, const Reptile& r) {
+        os << "Reptile (Name: " << r.getName() << ", Age: " << r.getAge() 
+           << ", " << (r.isVenomous ? "Venomous" : "Not Venomous") << ")";
+        return os;
+    }
       
   };
 
