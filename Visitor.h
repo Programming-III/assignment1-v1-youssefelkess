@@ -22,6 +22,13 @@ class Visitor{
           cout<<"Visitor Name:"<<visitorName<<endl;
       cout<<"Tickets Bought:"<<ticketsBought<<endl;
       }
+ 
+    friend ostream& operator<<(ostream& os, const Visitor& v) {
+        os << "Visitor Info:\n";
+        os << "Name: " << v.name << "\n";
+        os << "Tickets Bought: " << v.TicketsBought << ", " << (v.isHungry ? "Hungry" : "Not Hungry");
+        return os;
+    }
   };
 
 
