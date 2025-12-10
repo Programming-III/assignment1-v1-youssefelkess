@@ -52,7 +52,8 @@ class Animal{
           cout<<"not hungry"<<endl;
       }
   }
- friend ostream& operator<<(ostream& os, const Animal& a) {
+ 
+    friend ostream& operator<<(ostream& os, const Animal& a) {
         os << "Name: " << a.name << ", Age: " << a.age;
         return os;
     }
@@ -60,7 +61,8 @@ class Animal{
     bool operator==(const Animal& other) const {
         return (name == other.name && age == other.age);
     }
-virtual void sound() = 0;
+    
+    virtual void sound() = 0;
 };
 
 
