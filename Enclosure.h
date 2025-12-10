@@ -27,8 +27,8 @@ class Enclosure{
       void displayAnimals(){
           
       }
- void operator+=(Animal* animal) {
-        animals.push_back(animal);
+  void operator+=(Animal* animal) {
+        addAnimal(animal);
     }
     
     Animal* operator[](const string& name) {
@@ -48,9 +48,6 @@ class Enclosure{
         return os;
     }
     
-    const vector<Animal*>& getAnimals() const {
-        return animals;
-    }
   };
 
 
