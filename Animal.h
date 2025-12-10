@@ -11,9 +11,9 @@ class Animal{
   bool isHungry;
   public:
   Animal(){
-  name="";
-  int=0;
-  bool=true;
+  string name="";
+  int age=0;
+  bool isHungry =true;
   }
   Animal(string n,int a,bool hungry){
       name=n;
